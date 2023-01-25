@@ -1,6 +1,6 @@
 const PrimitiveRender = () => {
-    const title = "Clean Code"
-    return <h1>Book name: {title}</h1>
-}
+  const title = "Domain Driven Design";
+  return <h1>Book name: {title}</h1>;
+};
 
-export default PrimitiveRender
+export default PrimitiveRender;
