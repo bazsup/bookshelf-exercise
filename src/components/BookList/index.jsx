@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 // 💡 book contains title: string, coverImg: string, finished: boolean
 const books = [
@@ -12,28 +12,24 @@ const books = [
     title: "Clean Code",
     converImg:
       "https://m.media-amazon.com/images/I/41xShlnTZTL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
-    finished: true,
+    finished: false,
   },
-];
+]
 
 const BookList = () => {
   return (
     <div className="bookList">
-      {books.map((book) => {
-        <>
-          <div className="book">
-            <div className="book-thumbnail">
-              <img src={book.converImg} alt="book cover" />
-            </div>
-            <p className="text-title">{book.title}</p>
-            <span className="readingStatus">
-              {book.finished ? "finished" : ""}
-            </span>
+      {books.map((book) => (
+        <div className="book">
+          <div className="book-thumbnail">
+            <img src={book.converImg} alt="book cover" />
           </div>
-        </>;
-      })}
+          <p className="text-title">{book.title}</p>
+          {book.finished ? <span className="readingStatus">finished</span> : ""}
+        </div>
+      ))}
     </div>
-  );
-};
+  )
+}
 
-export default BookList;
+export default BookList
